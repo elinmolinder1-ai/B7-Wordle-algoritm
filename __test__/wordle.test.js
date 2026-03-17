@@ -1,6 +1,12 @@
 import { checkWords } from "../wordle.js";
 
-describe("Test function to check if all letters in the guess word is correct", () => {
+/**
+ * Testen går ut på att kontrollera:
+ * Om alla bokstäver är korrekta.
+ * Om vissa bokstäver är korrekta eller felplacerade 
+ * Om ingen bokstäverna matchar.
+ */
+describe("checkWords", () => {
   test("Returns all letters as correct when guess matches answer", () => {
     expect(checkWords("HALLÅ", "HALLÅ")).toEqual([
       { letter: "H", result: "correct" },
@@ -12,7 +18,7 @@ describe("Test function to check if all letters in the guess word is correct", (
   });
 
 
-  test("Some letters ar correct but misplaced", ()=>{
+  test("Returns mix of correct, misplaced and incorrect letters", ()=>{
     expect(checkWords("LILLA", "KALLE")).toEqual([
       {letter: "L", result: "incorrect" },
       {letter: "I", result: "incorrect" },
@@ -22,7 +28,7 @@ describe("Test function to check if all letters in the guess word is correct", (
     ]);
   });
 
-  test("All letters are wrong", ()=>{
+  test("Returns all letters as incorrect when there is no match", ()=>{
     expect(checkWords("MATA", "GÅS")).toEqual([
       {letter: "M", result: "incorrect" },
       {letter: "A", result: "incorrect" },
