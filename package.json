@@ -1,0 +1,24 @@
+{
+  "name": "b7-wordle-algoritm",
+  "version": "1.0.0",
+  "description": "Skriva den algoritm som utgör de centrala spelreglerna i spelet \"Wordle\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elinmolinder1-ai/B7-Wordle-algoritm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/elinmolinder1-ai/B7-Wordle-algoritm/issues"
+  },
+  "homepage": "https://github.com/elinmolinder1-ai/B7-Wordle-algoritm#readme",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
