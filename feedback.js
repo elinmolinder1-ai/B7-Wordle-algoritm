@@ -6,7 +6,7 @@
  * 
  */
 
-export function checkWords(guess, answer) {
+export function feedback(guess, answer) {
   const result = [];
   const answerLetters = answer.split("");
 
@@ -36,4 +36,4 @@ export function checkWords(guess, answer) {
 
   return result;
 }
-console.log(checkWords("HALLÅ", "HEJÅA"));
+console.log(feedback("HALLÅ", "HEJÅA"));

@@ -1,4 +1,4 @@
-import { checkWords } from "../wordle.js";
+import { feedback } from "../feedback.js";
 
 /**
  * Teststrategi:
@@ -13,9 +13,9 @@ import { checkWords } from "../wordle.js";
  * och hanterar både enkla och mer komplexa fall.
  */
 
-describe("checkWords", () => {
+describe("feedback", () => {
   test("Returns all letters as correct when guess matches answer", () => {
-    expect(checkWords("HALLÅ", "HALLÅ")).toEqual([
+    expect(feedback("HALLÅ", "HALLÅ")).toEqual([
       { letter: "H", result: "correct" },
       { letter: "A", result: "correct" },
       { letter: "L", result: "correct" },
@@ -26,7 +26,7 @@ describe("checkWords", () => {
 
 
   test("Returns mix of correct, misplaced and incorrect letters", ()=>{
-    expect(checkWords("LILLA", "KALLE")).toEqual([
+    expect(feedback("LILLA", "KALLE")).toEqual([
       {letter: "L", result: "incorrect" },
       {letter: "I", result: "incorrect" },
       {letter: "L", result: "correct" },
@@ -36,7 +36,7 @@ describe("checkWords", () => {
   });
 
   test("Returns all letters as incorrect when there is no match", ()=>{
-    expect(checkWords("MATA", "GÅS")).toEqual([
+    expect(feedback("MATA", "GÅS")).toEqual([
       {letter: "M", result: "incorrect" },
       {letter: "A", result: "incorrect" },
       {letter: "T", result: "incorrect" },
@@ -47,7 +47,7 @@ describe("checkWords", () => {
   });
 
   test("Handles duplicate letters", () =>{
-      expect (checkWords("LLLAA", "LALAL")).toEqual([
+      expect (feedback("LLLAA", "LALAL")).toEqual([
       {letter: "L", result: "correct" },
       {letter: "L", result: "misplaced" },
       {letter: "L", result: "correct" },
