@@ -1,21 +1,11 @@
-# B7-Wordle-algoritm
-Översikt:
-Detta projekt är en del av kursen i systemutveckling och går ut på att implementera den centrala algoritmen bakom det populära spelet Wordle.
-Målet är inte att bygga hela spelet, utan att skapa den logik som avgör hur korrekt en gissning är jämfört med det hemliga ordet.
+Spelet väljer ut ett ord med (vanligtvis) fem bokstäver. Spelaren ska gissa vilket ord det är genom att mata in något ord. Om ordet är korrekt har spelaren vunnit. Om det är fel ord ger spelet feedback som indikerar huruvida några bokstäver i det gissade ordet finns med i det hemliga ordet, och huruvida spelaren placerat dem på rätt plats. Spelaren gissar sedan på nytt.
 
-Uppgift: 
-Spelet väljer ett ord (vanligtvis fem bokstäver). Spelaren gissar ett ord, och algoritmen ska:
-* avgöra om gissningen är korrekt
-* annars ge feedback om varje bokstav:
-* är bokstaven rätt?
-* finns den i ordet men på fel plats?
-* finns den inte alls?
-* Spelaren fortsätter gissa tills rätt ord hittas.
+Den här uppgiften handlar inte om att bygga hela spelet, utan den centrala algoritm som kontrollerar om användaren placerat rätt bokstäver på rätt plats.
 
-Moment i uppgiften:
-Projektet består av följande delar:
-* Utforma en lösning för algoritm A (feedback‑algoritmen).
-* Planera en teststrategi för hur algoritmen ska verifieras.
-* Implementera algoritmen i form av en funktion.
-* Skriva minst två tester (gärna fler) som säkerställer att funktionen fungerar korrekt.
-* Dokumentera teststrategin i testkoden med kommentarer.
+Moment
+* Utforma en lösning på algoritm A nedan
+* Tänk igenom och utforma en teststrategi för algoritmen
+* Implementera algoritmen i form av en funktion
+* Skriv minst två tester, troligtvis fler, som * verifierar att funktionen fungerar som den ska
+* Dokumentera er teststrategi med kommentarer i testkoden
+* Om du vill, upprepa allt för algoritm B (valfritt, men fungerar som underlag för bedömning av kursens helhet)
