@@ -1,11 +1,18 @@
 import { checkWords } from "../wordle.js";
 
 /**
- * Testen går ut på att kontrollera:
- * Om alla bokstäver är korrekta.
- * Om vissa bokstäver är korrekta eller felplacerade 
- * Om ingen bokstäverna matchar.
+ * Teststrategi:
+ * Dessa tester verifierar algoritm A (feedback-funktionen) enligt Wordle-reglerna.
+ * Testerna täcker följande scenarier:
+ * 1. Alla bokstäver är korrekta (hela ordet matchar).
+ * 2. En blandning av correct, misplaced och incorrect.
+ * 3. Inga bokstäver matchar alls.
+ * 4. Hantering av dubbletter – korrekt ordning: correct → misplaced → incorrect.
+ * 
+ * Tillsammans säkerställer dessa tester att funktionen fungerar enligt specifikationen
+ * och hanterar både enkla och mer komplexa fall.
  */
+
 describe("checkWords", () => {
   test("Returns all letters as correct when guess matches answer", () => {
     expect(checkWords("HALLÅ", "HALLÅ")).toEqual([
@@ -34,7 +41,18 @@ describe("checkWords", () => {
       {letter: "A", result: "incorrect" },
       {letter: "T", result: "incorrect" },
       {letter: "A", result: "incorrect" },
-
     ]);
+
+    
   });
+
+  test("Handles duplicate letters", () =>{
+      expect (checkWords("LLLAA", "LALAL")).toEqual([
+      {letter: "L", result: "correct" },
+      {letter: "L", result: "misplaced" },
+      {letter: "L", result: "correct" },
+      {letter: "A", result: "correct" },
+      {letter: "A", result: "misplaced" }
+      ])
+    });
 });
