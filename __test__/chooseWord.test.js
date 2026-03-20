@@ -3,7 +3,13 @@ import { chooseWord } from "../chooseWord.js";
  * Teststrategi:
  * Dessa tester verifierar algoritm B enligt Wordle-reglerna.
  * Testerna täcker följande:
- * 1. 
+ * 1. Funktionen ska kunna välja ett ord med korrekt längd.
+ * 2. Funktionen ska filtrera bort ord med dubbletter när duplicates inte är tillåtna.
+ * 3. Funktionen ska returnera ett ord från den filtrerade listan (slump testas genom containment).
+ * 4. Funktionen ska hantera fallet där inga ord matchar och returnera null.
+ * 
+ * Tillsammans säkerställer dessa tester att funktionen filtrerar korrekt,
+ * hanterar reglerna för unika bokstäver och väljer ett giltigt ord.
  */
 
 describe("chooseWord", () => {
