@@ -1,4 +1,5 @@
 **B7 – Wordle‑algoritmer**
+
 Detta projekt innehåller två centrala algoritmer inspirerade av spelet Wordle. Fokus ligger på att implementera logiken bakom spelets regler samt att testa funktionerna med Jest.
 
 **Algoritm A – Feedback**
@@ -30,5 +31,6 @@ Funktionen filtrerar listan, väljer ett slumpmässigt ord och returnerar null o
 * null när inga ord matchar
 
 **Testning**
+
 Alla tester körs med:
 * npm test
