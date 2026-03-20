@@ -1,8 +1,3 @@
-/**
- *  
- * 
- */
-
 export function chooseWord(words, length, allowDuplicates) {
   const filtered = words.filter(word => {
     if (word.length !== length) return false;
